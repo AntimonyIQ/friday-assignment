@@ -1,0 +1,33 @@
+Apply for loop to render a data array in HTML.
+
+data = [
+
+];
+
+|---------------------------------------
+|
+|
+|
+|
+|
+|
+|
+|________________________________________
+
+step 1:
+Clone this repo to your pc
+
+step 2:
+create a branch with your name on it
+
+step 3:
+create a folder with your name on it
+
+step 4:
+Make your assignment
+
+step 5:
+Push your branch to github
+
+step 6:
+Make a Pull request
