@@ -16,6 +16,7 @@ data = [
 
 step 1:
 Clone this repo to your pc
+e.g: git clone https://github.com/AntimonyIQ/friday-assignment.git
 
 step 2:
 create a branch with your name on it
