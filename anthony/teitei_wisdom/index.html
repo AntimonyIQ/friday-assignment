@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+            
+</head>
+
+<body>
+
+  
+<div  class="news">
+
+   <div>
+<h6>Want to know whats going on.......</h1>
+   </div>
+
+    <div class="news_wrapper"  id="news_info">
+ </div>
+
+
+</div>
+      
+          
+
+  
+  
+    
+
+
+<script>
+
+    const newsbody = document.getElementById("news_info")
+
+const news_data = [
+  {
+    title: "New JavaScript Framework Released",
+    description: "A new JavaScript framework designed to simplify front-end development has been released, promising improved performance and developer experience.",
+    source: "TechCrunch",
+    date: "2024-04-09",
+    category: "JavaScript"
+  },
+  {
+    title: "Major Security Vulnerability Discovered in Python Library",
+    description: "A critical security vulnerability has been discovered in a popular Python library used by thousands of developers worldwide. Immediate action is recommended to patch affected systems.",
+    source: "The Verge",
+    date: "2024-04-08",
+    category: "Python"
+  },
+  {
+    title: "Google Announces New Machine Learning API",
+    description: "Google has unveiled a new machine learning API that promises to make it easier for developers to integrate advanced AI capabilities into their applications.",
+    source: "CNN Tech",
+    date: "2024-04-07",
+    category: "Machine Learning"
+  },
+  {
+    title: "Rust Programming Language Surpasses 1 Million Downloads",
+    description: "The Rust programming language has reached a significant milestone, surpassing 1 million downloads on popular package repositories. Developers praise Rust's safety features and performance.",
+    source: "Ars Technica",
+    date: "2024-04-06",
+    category: "Rust"
+  },
+  {
+    title: "Apple Unveils New Swift Programming Language Features",
+    description: "At its annual developer conference, Apple has announced several new features and improvements to the Swift programming language, including enhanced concurrency support and performance optimizations.",
+    source: "The New York Times",
+    date: "2024-04-05",
+    category: "Swift"
+  }
+]
+
+
+function renderNewsData(news_data){
+
+
+    for (let i = 0; i < news_data.length; i++) {
+
+        const newsItem = news_data[i];
+
+        newsContent  = document.createElement('div');
+      
+
+        newsContent.innerHTML = 
+        `<div>
+            
+            <h1> ${newsItem.title} </h1>
+        <h2>${newsItem.description} </h2>
+          <h3> ${newsItem.source} </h3>
+          <h4> ${newsItem.date} </h4>
+          <h5> ${newsItem.category} </h5>
+        
+        </div>`
+
+
+     newsbody.appendChild(newsContent);
+  
+        
+    }
+
+}
+
+
+
+renderNewsData(news_data);
+
+</script>
+
+    
+</body>
+
+
+</html>
