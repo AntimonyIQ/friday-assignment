@@ -1,16 +1,17 @@
 .news{
-    background: rgb(127, 52, 180);
-    padding: 10px;
+     position: relative;
+}
+
+.news h6{
+    font-size: 40px;
 }
 .news_wrapper{
     margin: 10px;
     position: relative;
+   
 }
 
 .news_wrapper  h1{
     color: red;
 }
 
-.news_wrapper h2{
-    color: #fff;
-}
