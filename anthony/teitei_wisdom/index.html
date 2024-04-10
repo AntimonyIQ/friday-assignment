@@ -5,107 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
-        body{
-            position: relative;
-        }
-
-        h1{
-            font-size: 30px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .table{
-            width: 100%;
+    <link rel="stylesheet" href="style.css">
             
-        }
-
-#student_info tr:nth-child(odd){
-    background: rgb(138, 80, 179);
-  height: 10vh;
-    text-align: center;
-    color: white;
-}
-
-#student_info tr:nth-child(even){
-    background: rgb(215, 69, 69);
-    text-align: center;
-    height: 10vh;
-    color: #fff;
-
-}
-
-    </style>
 </head>
+
 <body>
 
-    <h1>Axia Frontend Student Record .....</h1>
+  
+<div  class="news">
+    <div class="news_wrapper"  id="news_info">
+ </div>
+</div>
+      
+          
+
+  
+  
     
-
-    <table class="table">
-
-        <thead>
-            <tr  >
-                <th >Name</th>
-                <th>Track</th>
-                <th>Gender</th>
-            </tr>
-
-        </thead>
-
-
-<tbody id="student_info">
-
-    <tr class="up" >
-        <td class="down"></td>
-        <td class="down"></td>
-        <td class="down"></td>
-    </tr>
-
-</tbody >
-
-    </table>
-
 
 
 <script>
 
-    const tablebody = document.getElementById("student_info")
+    const newsbody = document.getElementById("news_info")
 
-const frontend__student =[
- {name:'Teitei Wisdom', track:'Frontend Dev ', gender: 'Male'},
- {name:'Egba Wisdom', track:'Frontend Dev ', gender: 'Male'},
- {name:'Rita Ojo', track:'Frontend Dev ', gender: 'Female'},
- {name:'Chidindu Emmanuel', track:'Frontend Dev', gender: 'Male'},
- {name:'Chidi Richard', track:'Frontend Dev ', gender: 'Male'},
- {name:'Dyke Edward Daniel', track:'Frontend Dev ', gender: 'Male'},
- {name:'Adamu Promise', track:'Frontend Dev ', gender: 'Male'},
-
-
+const news_data = [
+  {
+    title: "New JavaScript Framework Released",
+    description: "A new JavaScript framework designed to simplify front-end development has been released, promising improved performance and developer experience.",
+    source: "TechCrunch",
+    date: "2024-04-09",
+    category: "JavaScript"
+  },
+  {
+    title: "Major Security Vulnerability Discovered in Python Library",
+    description: "A critical security vulnerability has been discovered in a popular Python library used by thousands of developers worldwide. Immediate action is recommended to patch affected systems.",
+    source: "The Verge",
+    date: "2024-04-08",
+    category: "Python"
+  },
+  {
+    title: "Google Announces New Machine Learning API",
+    description: "Google has unveiled a new machine learning API that promises to make it easier for developers to integrate advanced AI capabilities into their applications.",
+    source: "CNN Tech",
+    date: "2024-04-07",
+    category: "Machine Learning"
+  },
+  {
+    title: "Rust Programming Language Surpasses 1 Million Downloads",
+    description: "The Rust programming language has reached a significant milestone, surpassing 1 million downloads on popular package repositories. Developers praise Rust's safety features and performance.",
+    source: "Ars Technica",
+    date: "2024-04-06",
+    category: "Rust"
+  },
+  {
+    title: "Apple Unveils New Swift Programming Language Features",
+    description: "At its annual developer conference, Apple has announced several new features and improvements to the Swift programming language, including enhanced concurrency support and performance optimizations.",
+    source: "The New York Times",
+    date: "2024-04-05",
+    category: "Swift"
+  }
 ]
 
 
-function renderFrontendStudent(frontend__student){
+function renderNewsData(news_data){
 
 
-    for (let i = 0; i < frontend__student.length; i++) {
-    const row = document.createElement('tr');
-     row.innerHTML =  '<td>' + frontend__student[i].name + '</td>' +
-                             '<td>' + frontend__student[i].track + '</td>' +
-                             '<td>' + frontend__student[i].gender + '</td>';
+    for (let i = 0; i < news_data.length; i++) {
 
-            tablebody.appendChild(row);
+        const newsItem = news_data[i];
+
+        newsContent  = document.createElement('div');
+      
+
+        newsContent.innerHTML = 
+        `<div>
+            
+            <h1> ${newsItem.title} </h1>
+        <h2>${newsItem.description} </h2>
+          <h3> ${newsItem.source} </h3>
+          <h4> ${newsItem.date} </h4>
+          <h5> ${newsItem.category} </h5>
+        
+        </div>`
+
+
+     newsbody.appendChild(newsContent);
+  
+        
     }
-
 
 }
 
 
 
-renderFrontendStudent(frontend__student);
+renderNewsData(news_data);
 
 </script>
 
     
 </body>
+
+
 </html>
