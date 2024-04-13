@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./wisdom.css" />
+  </head>
+  <body>
+    <h1 class="header">Assignment on loop</h1>
+
+    <section id="myContainer">
+      <!-- <div class="container">
+        <h1 class="title">rust program</h1>
+        <h3 class="category">category <span>Swift</span></h3>
+        <p class="content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
+          sapiente aperiam laborum consectetur maiores nobis ex? Voluptas magnam
+          commodi vel, porro corrupti laudantium ratione soluta quaerat eum ut
+          velit hic?
+        </p>
+
+        <span class="source">~Arc Rechnica</span>
+        <p class="date">4th dec 3034</p>
+      </div> -->
+      <!-- `
+      <div class="container">
+        <h1 class="title">${element[i].category}</h1>
+        <h3 class="category">category <span>${news_data[i].title}</span></h3>
+        <p class="content">${element[i].description}</p>
+
+        <span class="source">${element[i].source}</span>
+        <p class="date">${element[i].date}</p>
+      </div>
+      `; -->
+    </section>
+    <script defer>
+      news_data = [
+        {
+          title: "New JavaScript Framework Released",
+          description:
+            "A new JavaScript framework designed to simplify front-end development has been released, promising improved performance and developer experience.",
+          source: "TechCrunch",
+          date: "2024-04-09",
+          category: "JavaScript",
+        },
+        {
+          title: "Major Security Vulnerability Discovered in Python Library",
+          description:
+            "A critical security vulnerability has been discovered in a popular Python library used by thousands of developers worldwide. Immediate action is recommended to patch affected systems.",
+          source: "The Verge",
+          date: "2024-04-08",
+          category: "Python",
+        },
+        {
+          title: "Google Announces New Machine Learning API",
+          description:
+            "Google has unveiled a new machine learning API that promises to make it easier for developers to integrate advanced AI capabilities into their applications.",
+          source: "CNN Tech",
+          date: "2024-04-07",
+          category: "Machine Learning",
+        },
+        {
+          title: "Rust Programming Language Surpasses 1 Million Downloads",
+          description:
+            "The Rust programming language has reached a significant milestone, surpassing 1 million downloads on popular package repositories. Developers praise Rust's safety features and performance.",
+          source: "Ars Technica",
+          date: "2024-04-06",
+          category: "Rust",
+        },
+        {
+          title: "Apple Unveils New Swift Programming Language Features",
+          description:
+            "At its annual developer conference, Apple has announced several new features and improvements to the Swift programming language, including enhanced concurrency support and performance optimizations.",
+          source: "The New York Times",
+          date: "2024-04-05",
+          category: "Swift",
+        },
+      ];
+      function displayCards() {
+        for (let i = 0; i < news_data.length; i++) {
+          let element = news_data;
+          console.log(element);
+
+          let cardItems = document.getElementById("myContainer");
+          let contentContainer = document.createElement("div");
+
+          contentContainer.innerHTML = `
+      <div class="container">
+        <h1 class="title">${element[i].category}</h1>
+        <h4 class="category">${news_data[i].title}</h4>
+        <p class="content">${element[i].description}</p>
+
+        <span class="source">~${element[i].source}</span>
+        <p class="date">${element[i].date}</p>
+      </div>
+      `;
+          cardItems.appendChild(contentContainer);
+        }
+      }
+      displayCards();
+    </script>
+  </body>
+</html>
